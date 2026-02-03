@@ -316,8 +316,7 @@ const filteredProjects = projects.filter((project) => {
                 I'm a <span className="text-purple-500">{typedText}</span>
               </div>
               <p className="max-w-lg text-lg leading-relaxed text-gray-400">
-                Passionate about creating exceptional digital experiences with modern web technologies.
- I specialize in building scalable applications that solve real-world problems.
+               I build fast, scalable web applications and business websites using modern frontend technologies.
  </p>
               
               {/* Social Icons */}
@@ -372,8 +371,11 @@ const filteredProjects = projects.filter((project) => {
     
            </div>
               <p className="leading-relaxed text-white/80">
-                I am an aspiring Software Engineer with a strong foundation in programming, problem-solving, and software development. Currently pursuing a Higher National Diploma in Software Engineering, I have developed skills in software development, data management, and IT tools. I am eager to apply my knowledge and skills in a dynamic software engineering internship where I can further enhance my technical expertise, collaborate with experienced professionals, and contribute to innovative projects.</p>
-              <div className="flex mt-6 space-x-4">
+                I’m a frontend-focused software developer with hands-on experience building and deploying real-world web applications, business websites, and mobile solutions.
+
+My core strength is modern frontend development using React, where I focus heavily on clean UI design, performance, and usability. I also have practical experience working with backend APIs, databases, cloud deployment, and IoT-based systems.
+
+I’ve worked independently on freelance and demo projects, taking products from idea to production, and I’m now focused on growing within a professional engineering team building larger, more complex systems.           <div className="flex mt-6 space-x-4">
                 <a href="https://github.com/itschanuka" target="_blank" rel="noopener noreferrer"
                   className="transition-colors text-white/60 hover:text-purple-600">
                 <Github size={20} /></a>
