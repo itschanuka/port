@@ -111,15 +111,15 @@ const Portfolio = () => {
 };
 
 
-const roles = ['Frontend Developer', 'Full Stack Developer', 'UI/UX Designer'];
+const roles = ['Full Stack Developer'];
 const typedText = useTypedText(roles, 100, 1500);
  const technicalSkills = [
   { name: 'Java', level: 85 },
   { name: 'HTML/CSS', level: 90 },
   { name: 'JavaScript', level: 80 },
-  { name: 'C/C++', level: 70 },
+  { name: 'React', level: 70 },
   { name: 'SQL/MySQL', level: 75 },
-  { name: 'NOSQL', level: 65 },
+  { name: 'NOSQL', level: 75 },
   { name: 'Git/GitHub', level: 88 },
   { name: 'PHP', level: 85},
 ];
@@ -159,7 +159,7 @@ const typedText = useTypedText(roles, 100, 1500);
   {
     title: 'Elite Beauty Salon',
     category: 'Web App (Freelance)',
-    description: 'A high-performance business site featuring a modern UI and seamless WhatsApp API integration. Designed to convert visitors into appointments by allowing direct communication with stylists.',
+    description: 'A conversion-focused business website built for a beauty salon to streamline customer inquiries and appointment bookings. Developed using React and Tailwind CSS, with WhatsApp click-to-chat integration to enable direct customer communication and increase lead conversions.',
     technologies: ['React', 'Vite', 'Tailwind CSS', 'WhatsApp API'],
     image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=800', 
     website: 'https://deckproprojectsalon.netlify.app/',
@@ -167,7 +167,7 @@ const typedText = useTypedText(roles, 100, 1500);
   {
     title: 'Precision Construction Services',
     category: 'Web Design (Freelance)',
-    description: 'A fully responsive frontend architecture built for a construction firm. Focused on high-quality project galleries and optimized performance for mobile users.',
+    description: 'A fully responsive frontend website designed for a construction services company, focusing on project showcases and mobile performance. Built with React, Vite, Tailwind CSS, and Framer Motion to deliver smooth animations and a polished user experience.',
     technologies: ['React', 'Vite', 'Framer Motion', 'Tailwind CSS'],
     // New image for Project #2
     image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800',
@@ -176,7 +176,7 @@ const typedText = useTypedText(roles, 100, 1500);
   {
     title: 'Chanuka Dev Portfolio',
     category: 'Full Stack',
-    description: 'My official freelance brand platform. It serves as a central hub for client inquiries and showcases my ability to deliver production-ready software solutions.',
+    description: 'A personal freelance brand platform showcasing production-ready projects and providing a central hub for client inquiries. Built with React and supported by a Node.js and Express backend, demonstrating full-stack integration and deployment workflows.',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
     website: 'https://deckpro.space'
@@ -184,7 +184,7 @@ const typedText = useTypedText(roles, 100, 1500);
   {
     title: 'Tuition Management Android App',
     category: 'Mobile App',
-    description: 'Simplifies student management, attendance tracking via QR codes, and assignment submissions for tuition centers.',
+    description: 'An Android application designed to manage students, classes, attendance, and assignments for tuition centers. Built using Kotlin and Firebase, featuring QR-based attendance tracking and cloud-based assignment submissions',
     technologies: ['Android Studio', 'Firebase', 'QR Code Scanning'],
     image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=800',
     github: 'https://github.com/itschanuka'
@@ -192,7 +192,7 @@ const typedText = useTypedText(roles, 100, 1500);
   {
     title: 'Smart Parcel Box',
     category: 'IoT Project',
-    description: 'An automated package drop-off system ensuring deliveries are secure and accessible only by the owner via real-time monitoring.',
+    description: 'An IoT-based smart parcel box system designed to securely manage package deliveries. Integrated ESP8266, sensors, and servo motors with Firebase to enable real-time monitoring, automated access control, and backend device state management.',
     technologies: ['ESP8266', 'Firebase', 'Sensors', 'Servo Motor'],
     image: 'https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&q=80&w=800',
     github: 'https://github.com/itschanuka'
@@ -200,7 +200,7 @@ const typedText = useTypedText(roles, 100, 1500);
   {
     title: 'Autonomous Luggage Robot',
     category: 'IoT Project',
-    description: 'Automates luggage handling using line-following, obstacle detection, and RFID-based gate selection.',
+    description: 'An automated robotics project designed to assist with luggage handling using line-following, obstacle detection, and RFID-based navigation. Implemented using Arduino Mega, ultrasonic sensors, and RFID modules.',
     technologies: ['Arduino Mega', 'RFID', 'Ultrasonic Sensors'],
     image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800',
     github: 'https://github.com/itschanuka'
@@ -208,7 +208,7 @@ const typedText = useTypedText(roles, 100, 1500);
   {
     title: 'Urban Food E-Commerce',
     category: 'Web App',
-    description: 'A fresh food e-commerce platform connecting customers with high-quality products. Features a hybrid MongoDB & SQL backend.',
+    description: 'A full-stack food e-commerce platform designed to manage product listings, customer orders, and inventory workflows. Built with PHP and a hybrid MongoDB + SQL backend to handle both flexible product data and structured order information. Implements core e-commerce functionality including product CRUD operations, order processing, and data persistence.',
     technologies: ['PHP', 'HTML', 'CSS', 'MongoDB', 'SQL'],
     image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=800',
     github: 'https://github.com/itschanuka'
@@ -216,7 +216,7 @@ const typedText = useTypedText(roles, 100, 1500);
   {
     title: 'Modern Room Clothing',
     category: 'Web App',
-    description: 'Responsive e-commerce website for a clothing brand with a secure authentication system and clean UI/UX.',
+    description: 'A responsive e-commerce website developed for a clothing brand, focused on clean UI, usability, and secure user authentication. Built using vanilla HTML, CSS, and JavaScript, featuring structured layouts, responsive design principles, and frontend logic for user interaction and authentication flows.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
     github: 'https://github.com/itschanuka'
