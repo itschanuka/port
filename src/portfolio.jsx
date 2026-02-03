@@ -375,7 +375,7 @@ const filteredProjects = projects.filter((project) => {
 
 My core strength is modern frontend development using React, where I focus heavily on clean UI design, performance, and usability. I also have practical experience working with backend APIs, databases, cloud deployment, and IoT-based systems.
 
-I’ve worked independently on freelance and demo projects, taking products from idea to production, and I’m now focused on growing within a professional engineering team building larger, more complex systems.           <div className="flex mt-6 space-x-4">
+I’ve worked independently on freelance and demo projects, taking products from idea to production, and I’m now focused on growing within a professional engineering team building larger, more complex systems.      </p>     <div className="flex mt-6 space-x-4">
                 <a href="https://github.com/itschanuka" target="_blank" rel="noopener noreferrer"
                   className="transition-colors text-white/60 hover:text-purple-600">
                 <Github size={20} /></a>
