@@ -816,7 +816,7 @@ const filteredProjects = projects.filter((project) => {
       <Phone className="text-purple-600" size={24} />
       <div>
         <h4 className="font-semibold text-white">Phone</h4>
-        <p className="text-white/60">+(94) 743897736</p>
+        <p className="text-white/60">+(94) 714104425</p>
       </div>
     </div>
 
@@ -921,7 +921,7 @@ const filteredProjects = projects.filter((project) => {
       <footer className="px-4 py-8 border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-white/60">
-            © 2025 Chanuka Keerthisigha. Built with React. All rights reserved.
+            © 2026 Chanuka Keerthisigha. Built with React. All rights reserved.
           </p>
         </div>
       </footer>
