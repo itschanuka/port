@@ -157,43 +157,68 @@ const typedText = useTypedText(roles, 100, 1500);
   ];
  const projects = [
   {
+    title: 'Elite Beauty Salon',
+    category: 'Web App (Freelance)',
+    description: 'A high-performance business site featuring a modern UI and seamless WhatsApp API integration. Designed to convert visitors into appointments by allowing direct communication with stylists.',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'WhatsApp API'],
+    image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=800', 
+    website: 'https://deckproprojectsalon.netlify.app/',
+  },
+  {
+    title: 'Precision Construction Services',
+    category: 'Web Design (Freelance)',
+    description: 'A fully responsive frontend architecture built for a construction firm. Focused on high-quality project galleries and optimized performance for mobile users.',
+    technologies: ['React', 'Vite', 'Framer Motion', 'Tailwind CSS'],
+    // New image for Project #2
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800',
+    website: 'https://deckproconstruction.netlify.app/'
+  },
+  {
+    title: 'Chanuka Dev Portfolio',
+    category: 'Full Stack',
+    description: 'My official freelance brand platform. It serves as a central hub for client inquiries and showcases my ability to deliver production-ready software solutions.',
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+    website: 'https://deckpro.space'
+  },
+  {
     title: 'Tuition Management Android App',
     category: 'Mobile App',
-    description: 'Designed to help tuition centers streamline their operations and enhance learning experiences. This app simplifies student management, attendance tracking, assignment submissions, and much more.',
-    technologies: ['Android Studio', 'Firebase (Firestore, Firebase Storage)', 'QR Code Scanning'],
-    // image: 'URL_TO_IMAGE', // Add image URL here
-    github: 'https://github.com/itschanuka' // Add GitHub URL here
+    description: 'Simplifies student management, attendance tracking via QR codes, and assignment submissions for tuition centers.',
+    technologies: ['Android Studio', 'Firebase', 'QR Code Scanning'],
+    image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=800',
+    github: 'https://github.com/itschanuka'
   },
   {
     title: 'Smart Parcel Box',
     category: 'IoT Project',
-    description: 'This system automates the package drop-off process, ensuring deliveries are secure, constantly monitored, and accessible only by the owner.',
+    description: 'An automated package drop-off system ensuring deliveries are secure and accessible only by the owner via real-time monitoring.',
     technologies: ['ESP8266', 'Firebase', 'Sensors', 'Servo Motor'],
-    // image: 'URL_TO_IMAGE',
+    image: 'https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&q=80&w=800',
     github: 'https://github.com/itschanuka'
   },
   {
-    title: 'Autonomous Luggage Transporter Robot',
+    title: 'Autonomous Luggage Robot',
     category: 'IoT Project',
-    description: 'This robot automates luggage handling in airports, using line-following and obstacle detection for safe navigation. It features weight measurement, RFID-based gate selection, and a secure luggage compartment.',
-    technologies: ['Arduino Mega', 'IR & Ultrasonic Sensors', 'RFID', 'Bluetooth', 'Servo Motors'],
-    // image: 'URL_TO_IMAGE',
+    description: 'Automates luggage handling using line-following, obstacle detection, and RFID-based gate selection.',
+    technologies: ['Arduino Mega', 'RFID', 'Ultrasonic Sensors'],
+    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800',
     github: 'https://github.com/itschanuka'
   },
   {
-    title: 'Urban Food E-Commerce Platform',
+    title: 'Urban Food E-Commerce',
     category: 'Web App',
-    description: 'A fresh food e-commerce platform connecting customers with healthy, high-quality products. Features a robust backend with MongoDB & SQL and a user-friendly frontend.',
+    description: 'A fresh food e-commerce platform connecting customers with high-quality products. Features a hybrid MongoDB & SQL backend.',
     technologies: ['PHP', 'HTML', 'CSS', 'MongoDB', 'SQL'],
-    // image: 'URL_TO_IMAGE',
+    image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=800',
     github: 'https://github.com/itschanuka'
   },
   {
-    title: 'Modern Room Clothing Website',
+    title: 'Modern Room Clothing',
     category: 'Web App',
-    description: 'A fully developed, responsive e-commerce website for a clothing brand, built with HTML, CSS, and JavaScript. It features a secure authentication system and a clean, intuitive UI/UX.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
-    // image: 'URL_TO_IMAGE',
+    description: 'Responsive e-commerce website for a clothing brand with a secure authentication system and clean UI/UX.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
     github: 'https://github.com/itschanuka'
   }
 ];
@@ -303,7 +328,7 @@ const typedText = useTypedText(roles, 100, 1500);
               </div>
               
            
-       <a href="/SanjulaMohottiCV.pdf" download className="inline-flex items-center gap-2 px-8 py-4 font-semibold text-white transition-all duration-300 transform rounded-full shadow-lg bg-gradient-to-r from-purple-600 to-pink-800 hover:from-purple-700 hover:to-pink-600 hover:scale-105 hover:shadow-purple-500/25">
+       <a href="/ChanukaCV.pdf" download className="inline-flex items-center gap-2 px-8 py-4 font-semibold text-white transition-all duration-300 transform rounded-full shadow-lg bg-gradient-to-r from-purple-600 to-pink-800 hover:from-purple-700 hover:to-pink-600 hover:scale-105 hover:shadow-purple-500/25">
                 <Download size={18} />
                 Download CV
               </a>
@@ -551,21 +576,31 @@ const typedText = useTypedText(roles, 100, 1500);
                 </span>
                 )}
 
-              <div className="flex gap-4 mt-4">
-                  {project.github && (
-                    <a
-            
-           href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-purple-600 transition-colors hover:text-purple-500"
-                   
-  >
-                      <Github className="mr-1" size={18} /> GitHub
-                    </a>
-                  )}
-                  
-              </div>
+{/* Find this section inside filteredProjects.map */}
+<div className="flex gap-4 mt-4">
+  {project.github && (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center text-purple-600 transition-colors hover:text-purple-500"
+    >
+      <Github className="mr-1" size={18} /> GitHub
+    </a>
+  )}
+
+  {/* ADD THIS NEW BLOCK BELOW */}
+  {project.website && (
+    <a
+      href={project.website}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center text-pink-600 transition-colors hover:text-pink-500"
+    >
+      <ExternalLink className="mr-1" size={18} /> Website
+    </a>
+  )}
+</div>
    
              
                 
