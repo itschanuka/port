@@ -10,7 +10,7 @@ const Portfolio = () => {
   const [skillsTab, setSkillsTab] = useState('technical');
   const [experienceTab, setExperienceTab] = useState('education');
   const [toolsTab, setToolsTab] = useState('All');
-  const [comingSoonFilter, setComingSoonFilter] = useState('All');
+  const [comingSoonFilter] = useState('All');
  // 'All', 'Coming Soon', 'Completed'
  
   
@@ -84,7 +84,7 @@ const Portfolio = () => {
   const [subIndex, setSubIndex] = useState(0);  // Character index
   const [forward, setForward] = useState(true);
  // Typing direction
-  const [blinking, setBlinking] = useState(true); // Optional: cursor blinking
+ // Optional: cursor blinking
 
   useEffect(() => {
     if (index >= words.length) return;
@@ -224,13 +224,17 @@ const typedText = useTypedText(roles, 100, 1500);
 ];
  const [activeCategory, setActiveCategory] = useState('All');
   const [showAll, setShowAll] = useState(false);
- const filteredProjects = projects.filter((project) => {
-  if (activeCategory === 'All') return true;
-  return project.category === activeCategory;
+const filteredProjects = projects.filter((project) => {
+  // Check Category
+  const matchesCategory = activeCategory === 'All' || project.category === activeCategory;
+  
+  // Check Coming Soon (if you decide to use the filter)
+  let matchesStatus = true;
+  if (comingSoonFilter === 'Coming Soon') matchesStatus = project.comingSoon === true;
+  if (comingSoonFilter === 'Completed') matchesStatus = project.comingSoon !== true;
 
-  if (comingSoonFilter === 'Coming Soon') return project.comingSoon === true;
-  if (comingSoonFilter === 'Completed') return project.comingSoon !== true;
-  })
+  return matchesCategory && matchesStatus;
+});
 
 
 
