@@ -76,7 +76,7 @@ const Portfolio = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black ">
+    <div className="min-h-screen portfolio-background">
       <Navbar activeSection={activeSection} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} scrollToSection={scrollToSection} />
       <Hero typedText={typedText} />
       <About skillsTab={skillsTab} setSkillsTab={setSkillsTab} experienceTab={experienceTab} setExperienceTab={setExperienceTab} technicalSkills={technicalSkills} softSkills={softSkills} educationData={educationData} experienceData={experienceData} />
