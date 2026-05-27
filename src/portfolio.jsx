@@ -12,7 +12,6 @@ import { educationData, experienceData } from './data/education';
 import { projects } from './data/projects';
 import { softSkills, technicalSkills } from './data/skills';
 import { design, frameworks, languages, tools } from './data/tools';
-import { useTypedText } from './hooks/useTypedText';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +23,6 @@ const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [showAll, setShowAll] = useState(false);
   const formRef = useRef();
-  const typedText = useTypedText(['Full Stack Software Engineer', 'Business Systems Developer', 'AI Integration Developer', 'Next.js & TypeScript Engineer'], 100, 1500);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -52,18 +50,29 @@ const Portfolio = () => {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100;
-      for (const section of ['home', 'about', 'projects', 'tools', 'contact']) {
-        const element = document.getElementById(section);
-        if (element && scrollPosition >= element.offsetTop && scrollPosition < element.offsetTop + element.offsetHeight) {
-          setActiveSection(section);
-          break;
+    const sections = ['home', 'about', 'projects', 'tools', 'contact']
+      .map((section) => document.getElementById(section))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleSection) {
+          setActiveSection(visibleSection.target.id);
         }
+      },
+      {
+        rootMargin: '-35% 0px -50% 0px',
+        threshold: [0.1, 0.25, 0.5],
       }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
   }, []);
 
   const filteredProjects = projects.filter((project) => {
@@ -78,7 +87,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen portfolio-background">
       <Navbar activeSection={activeSection} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} scrollToSection={scrollToSection} />
-      <Hero typedText={typedText} />
+      <Hero />
       <About skillsTab={skillsTab} setSkillsTab={setSkillsTab} experienceTab={experienceTab} setExperienceTab={setExperienceTab} technicalSkills={technicalSkills} softSkills={softSkills} educationData={educationData} experienceData={experienceData} />
       <Projects activeCategory={activeCategory} setActiveCategory={setActiveCategory} showAll={showAll} setShowAll={setShowAll} filteredProjects={filteredProjects} />
       <Tools toolsTab={toolsTab} setToolsTab={setToolsTab} languages={languages} frameworks={frameworks} tools={tools} design={design} />
