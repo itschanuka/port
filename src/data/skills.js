@@ -14,14 +14,14 @@ export const technicalSkills = [
 ];
 
 export const softSkills = [
-  'Problem solving',
-  'Client communication',
-  'Requirements gathering',
-  'Product thinking',
-  'Self-directed learning',
-  'Attention to detail',
-  'On-time delivery',
-  'Team collaboration',
-  'Workflow analysis',
-  'Adaptability',
+  { name: 'Problem solving', level: 90 },
+  { name: 'Client communication', level: 88 },
+  { name: 'Requirements gathering', level: 86 },
+  { name: 'Product thinking', level: 85 },
+  { name: 'Self-directed learning', level: 92 },
+  { name: 'Attention to detail', level: 88 },
+  { name: 'On-time delivery', level: 90 },
+  { name: 'Team collaboration', level: 87 },
+  { name: 'Workflow analysis', level: 86 },
+  { name: 'Adaptability', level: 89 },
 ];

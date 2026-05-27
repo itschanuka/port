@@ -17,6 +17,7 @@ import { useTypedText } from './hooks/useTypedText';
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [skillsTab, setSkillsTab] = useState('technical');
   const [experienceTab, setExperienceTab] = useState('education');
   const [toolsTab, setToolsTab] = useState('All');
   const [comingSoonFilter] = useState('All');
@@ -78,7 +79,7 @@ const Portfolio = () => {
     <div className="min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black ">
       <Navbar activeSection={activeSection} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} scrollToSection={scrollToSection} />
       <Hero typedText={typedText} />
-      <About experienceTab={experienceTab} setExperienceTab={setExperienceTab} technicalSkills={technicalSkills} softSkills={softSkills} educationData={educationData} experienceData={experienceData} />
+      <About skillsTab={skillsTab} setSkillsTab={setSkillsTab} experienceTab={experienceTab} setExperienceTab={setExperienceTab} technicalSkills={technicalSkills} softSkills={softSkills} educationData={educationData} experienceData={experienceData} />
       <Projects activeCategory={activeCategory} setActiveCategory={setActiveCategory} showAll={showAll} setShowAll={setShowAll} filteredProjects={filteredProjects} />
       <Tools toolsTab={toolsTab} setToolsTab={setToolsTab} languages={languages} frameworks={frameworks} tools={tools} design={design} />
       <Contact formRef={formRef} sendEmail={sendEmail} />

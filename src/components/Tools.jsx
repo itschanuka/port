@@ -5,29 +5,29 @@ const Tools = ({ toolsTab, setToolsTab, languages, frameworks, tools, design }) 
     items.map((tool, index) => (
       <div
         key={index}
-        className="flex flex-col items-center p-6 transition-all duration-300 transform border bg-white/5 backdrop-blur-md rounded-2xl border-white/10 hover:border-purple-400/50 hover:scale-105 hover:shadow-lg group"
+        className="flex flex-col items-center p-4 transition-all duration-300 transform border sm:p-6 bg-white/5 backdrop-blur-md rounded-2xl border-white/10 hover:border-purple-400/50 hover:scale-105 hover:shadow-lg group"
       >
-        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full" style={{ backgroundColor: `${tool.color}20` }}>
-          <img src={tool.icon} alt={tool.name} className="w-10 h-10" />
+        <div className="flex items-center justify-center w-12 h-12 mb-3 rounded-full sm:w-16 sm:h-16 sm:mb-4" style={{ backgroundColor: `${tool.color}20` }}>
+          <img src={tool.icon} alt={tool.name} className="w-8 h-8 sm:w-10 sm:h-10" />
         </div>
-        <h3 className="font-semibold text-white transition-colors group-hover:text-purple-400">{tool.name}</h3>
+        <h3 className="text-sm font-semibold text-center text-white transition-colors sm:text-base group-hover:text-purple-400">{tool.name}</h3>
       </div>
     ));
 
   return (
-    <section id="tools" className="px-4 py-20">
+    <section id="tools" className="px-4 py-16 md:py-20">
       <div className="max-w-6xl mx-auto">
-        <h2 className="mb-16 text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-purple-500 to-purple-800 bg-clip-text">
+        <h2 className="mb-10 text-3xl font-bold text-center text-transparent sm:text-4xl md:mb-16 md:text-5xl bg-gradient-to-r from-purple-500 to-purple-800 bg-clip-text">
           Tools & Technics
         </h2>
 
         <div className="flex justify-center mb-12">
-          <div className="flex p-2 border rounded-xl bg-white/5 backdrop-blur-md border-white/10">
+          <div className="flex flex-wrap justify-center gap-1 p-2 border rounded-xl bg-white/5 backdrop-blur-md border-white/10">
             {['All', 'Languages', 'Frameworks', 'Tools', 'Design'].map((category) => (
               <button
                 key={category}
                 onClick={() => setToolsTab(category)}
-                className={`px-6 py-3 rounded-lg transition-all duration-300 font-medium ${
+                className={`px-3 py-2 text-sm rounded-lg transition-all duration-300 font-medium sm:px-6 sm:py-3 sm:text-base ${
                   toolsTab === category ? 'bg-gradient-to-r from-purple-600 to-pink-800 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-white/10'
                 }`}
               >
@@ -37,7 +37,7 @@ const Tools = ({ toolsTab, setToolsTab, languages, frameworks, tools, design }) 
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4 lg:grid-cols-6">
           {(toolsTab === 'All' || toolsTab === 'Languages') && renderTools(languages)}
           {(toolsTab === 'All' || toolsTab === 'Frameworks') && renderTools(frameworks)}
           {(toolsTab === 'All' || toolsTab === 'Tools') && renderTools(tools)}

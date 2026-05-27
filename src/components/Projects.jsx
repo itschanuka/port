@@ -2,13 +2,13 @@ import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = ({ activeCategory, setActiveCategory, showAll, setShowAll, filteredProjects }) => (
-  <section id="projects" className="px-4 py-20">
+  <section id="projects" className="px-4 py-16 md:py-20">
     <div className="max-w-6xl mx-auto">
-      <h2 className="mb-16 text-4xl font-bold text-center text-transparent md:text-5xl bg-gradient-to-r from-purple-500 to-purple-800 bg-clip-text">
+      <h2 className="mb-10 text-3xl font-bold text-center text-transparent sm:text-4xl md:mb-16 md:text-5xl bg-gradient-to-r from-purple-500 to-purple-800 bg-clip-text">
         Featured Projects
       </h2>
 
-      <div className="flex justify-center gap-4 mb-12">
+      <div className="flex flex-wrap justify-center gap-3 mb-10 md:gap-4 md:mb-12">
         {['All', 'Full Stack', 'Web App', 'Mobile App', 'IoT Project', 'AI & Automation'].map((category) => (
           <button
             key={category}
@@ -16,7 +16,7 @@ const Projects = ({ activeCategory, setActiveCategory, showAll, setShowAll, filt
               setActiveCategory(category);
               setShowAll(false);
             }}
-            className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 border border-white/20 ${
+            className={`px-3 py-2 text-xs font-medium rounded-full transition-all duration-300 border border-white/20 sm:px-4 sm:text-sm ${
               activeCategory === category
                 ? 'bg-gradient-to-r from-purple-600 to-pink-800 hover:from-purple-700 text-white'
                 : 'text-white/70 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-800 hover:text-white'
@@ -27,7 +27,7 @@ const Projects = ({ activeCategory, setActiveCategory, showAll, setShowAll, filt
         ))}
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {filteredProjects.slice(0, showAll ? filteredProjects.length : 6).map((project, index) => (
           <div key={index} className="overflow-hidden transition-all duration-300 border bg-white/5 backdrop-blur-md rounded-2xl border-white/10 hover:border-purple-600/50 hover:transform hover:scale-105 group">
             <div className="relative overflow-hidden">
@@ -35,13 +35,13 @@ const Projects = ({ activeCategory, setActiveCategory, showAll, setShowAll, filt
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
 
-            <div className="p-6">
-              <h3 className="mb-3 text-xl font-bold text-white">{project.title}</h3>
-              <p className="mb-4 leading-relaxed text-white/70">{project.description}</p>
+            <div className="p-5 sm:p-6">
+              <h3 className="mb-3 text-lg font-bold leading-snug text-white sm:text-xl">{project.title}</h3>
+              <p className="mb-4 text-sm leading-relaxed sm:text-base text-white/70">{project.description}</p>
 
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, techIndex) => (
-                  <span key={techIndex} className="px-3 py-1 text-sm text-purple-400 border rounded-full bg-purple-700/20 border-purple-500/30">
+                  <span key={techIndex} className="px-2.5 py-1 text-xs text-purple-400 border rounded-full sm:px-3 sm:text-sm bg-purple-700/20 border-purple-500/30">
                     {tech}
                   </span>
                 ))}

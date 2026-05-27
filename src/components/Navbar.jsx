@@ -2,20 +2,22 @@ import React from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = ({ activeSection, isMenuOpen, setIsMenuOpen, scrollToSection }) => (
-  <nav className="fixed top-0 z-50 w-full border-b bg-black/20 backdrop-blur-md border-white/10">
-    <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
-      <div className="flex items-center justify-between h-16">
-        <div className="text-2xl font-bold text-transparent bg-gradient-to-r from-purple-500 via-purple-700 to-purple-900 bg-clip-text">
+  <nav className="fixed top-0 z-50 w-full px-4 pt-4">
+    <div className="max-w-6xl mx-auto">
+      <div className="flex items-center justify-between h-16 px-4 border shadow-2xl rounded-2xl bg-black/45 backdrop-blur-xl border-white/10 shadow-purple-950/20 sm:px-5">
+        <div className="text-lg font-bold text-transparent sm:text-xl bg-gradient-to-r from-purple-400 via-fuchsia-500 to-pink-500 bg-clip-text">
           Chanuka Keerthisigha
         </div>
 
-        <div className="hidden space-x-8 md:flex">
+        <div className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 md:flex">
           {['home', 'about', 'projects', 'tools', 'contact'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item)}
-              className={`capitalize transition-all duration-300 hover:text-purple-600 ${
-                activeSection === item ? 'text-purple-600 border-b-2 border-purple-600' : 'text-white/80'
+              className={`rounded-full px-4 py-2 text-sm font-medium capitalize transition-all duration-300 ${
+                activeSection === item
+                  ? 'bg-gradient-to-r from-purple-600 to-pink-800 text-white shadow-lg shadow-purple-900/30'
+                  : 'text-white/70 hover:bg-white/10 hover:text-white'
               }`}
             >
               {item}
@@ -23,20 +25,28 @@ const Navbar = ({ activeSection, isMenuOpen, setIsMenuOpen, scrollToSection }) =
           ))}
         </div>
 
-        <button className="text-white md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button
+          className="inline-flex items-center justify-center w-10 h-10 text-white transition-all border rounded-full md:hidden border-white/10 bg-white/5 hover:bg-white/10"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle navigation"
+        >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
     </div>
 
     {isMenuOpen && (
-      <div className="border-t md:hidden bg-black/40 backdrop-blur-md border-white/10">
-        <div className="px-4 pt-2 pb-3 space-y-1">
+      <div className="max-w-6xl mx-auto mt-2 overflow-hidden border shadow-2xl md:hidden rounded-2xl bg-black/80 backdrop-blur-xl border-white/10 shadow-purple-950/20">
+        <div className="p-2 space-y-1">
           {['home', 'about', 'projects', 'tools', 'contact'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item)}
-              className="block w-full px-3 py-2 text-left capitalize transition-colors text-white/80 hover:text-purple-600"
+              className={`block w-full rounded-xl px-4 py-3 text-left text-sm font-medium capitalize transition-all ${
+                activeSection === item
+                  ? 'bg-gradient-to-r from-purple-600 to-pink-800 text-white'
+                  : 'text-white/75 hover:bg-white/10 hover:text-white'
+              }`}
             >
               {item}
             </button>
