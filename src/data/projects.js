@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: 'Auto Prime — Dealership Management System',
+    title: 'Auto Prime Dealership Management System',
     category: ['Full Stack', 'AI & Automation'],
     description: 'Full dealership operating platform built after face-to-face research with local dealership owners. Covers public vehicle website, secure admin console, inventory, CRM, deals, payments, finance, trade-ins, commissions, expenses, employees, reports, backups, audit logs, MFA, and role-based permissions. Integrated a Python FastAPI + Google ADK/Gemini AI assistant for dealership queries.',
     technologies: ['Next.js', 'TypeScript', 'Node.js', 'Express', 'Python', 'FastAPI', 'Supabase', 'PostgreSQL', 'Google Gemini', 'Tailwind CSS'],
@@ -9,7 +9,7 @@ export const projects = [
     github: 'TODO_AUTO_PRIME_GITHUB_URL',
   },
   {
-    title: 'TradeTrack — Multi-Tenant Contractor SaaS',
+    title: 'TradeTrack Multi-Tenant Contractor SaaS',
     category: ['Full Stack', 'AI & Automation'],
     description: 'Multi-tenant SaaS for solo contractors and service businesses. Full workflow from client to quote to job to invoice to payment. Tenant architecture with org-scoped queries, RBAC, signed storage URLs, rate limiting, server-side PDF generation, and a Python FastAPI invoice worker. Includes Vitest coverage for core business workflows.',
     technologies: ['Next.js 14', 'TypeScript', 'Prisma', 'PostgreSQL', 'Supabase', 'NextAuth.js', 'Tailwind CSS', 'Docker', 'Vitest', 'Python'],
@@ -18,7 +18,7 @@ export const projects = [
     github: 'TODO_TRADETRACK_GITHUB_URL',
   },
   {
-    title: 'MAMMOCARE — AI Mammogram Guidance Platform',
+    title: 'MAMMOCARE AI Mammogram Guidance Platform',
     category: ['Full Stack', 'AI & Automation'],
     description: 'University team project for AI-assisted mammogram screening. Role-based patient, doctor, and admin portals via Firebase Auth. Python FastAPI AI proxy integrates Roboflow detection, returning bounding boxes and confidence values. Features annotated canvas rendering, PDF report generation, doctor booking, and realtime chat with file attachments.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase', 'Python', 'FastAPI', 'Roboflow API', 'Canvas API', 'jsPDF'],
