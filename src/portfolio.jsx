@@ -53,26 +53,41 @@ const Portfolio = () => {
     const sections = ['home', 'about', 'projects', 'tools', 'contact']
       .map((section) => document.getElementById(section))
       .filter(Boolean);
+    let ticking = false;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleSection = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    const updateActiveSection = () => {
+      const marker = window.scrollY + window.innerHeight * 0.38;
+      let currentSection = sections[0];
 
-        if (visibleSection) {
-          setActiveSection(visibleSection.target.id);
+      sections.forEach((section) => {
+        if (marker >= section.offsetTop) {
+          currentSection = section;
         }
-      },
-      {
-        rootMargin: '-35% 0px -50% 0px',
-        threshold: [0.1, 0.25, 0.5],
+      });
+
+      if (currentSection) {
+        setActiveSection((current) => (current === currentSection.id ? current : currentSection.id));
       }
-    );
+    };
 
-    sections.forEach((section) => observer.observe(section));
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateActiveSection();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
 
-    return () => observer.disconnect();
+    updateActiveSection();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
   }, []);
 
   const filteredProjects = projects.filter((project) => {
